@@ -19,8 +19,8 @@ for t in range(tc):
     dir = 0 # 0부터 우,하,좌,상
 
     while num <= n*n:
-        if arr[rp][cp] == 0:   # 현재 위치에 숫자가 있으면
-            arr[rp][cp] = num   # 현재 위치에 숫자 넣기
+        if arr[rp][cp] == 0:   # 현재 위치에 숫자가 있으면 (visit 하지 않았으면)
+            arr[rp][cp] = num   # 현재 위치에 숫자 넣기 (visit 체크 겸용)
             num += 1
             rp += dirs[dir%4][0]    # 이동
             cp += dirs[dir%4][1]
